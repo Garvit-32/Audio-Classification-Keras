@@ -57,7 +57,7 @@ MFCCs = librosa.feature.mfcc(
 # Melspectorgram
 melspectrogram = librosa.feature.melspectrogram(
     signal, n_fft=n_fft, hop_length=hop_length)
-s_db = librosa.power_to_db(melspectrogram, ref=np.max)
+s_db = librosa.amplitude_to_db(melspectrogram, ref=np.max)
 # librosa.display.specshow(s_db, hop_length=hop_length)
 # plt.xlabel("Time")
 # plt.ylabel("Mel")
